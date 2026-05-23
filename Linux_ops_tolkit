@@ -1,0 +1,44 @@
+#!/bin/bash
+#This one provides more in detail menu options on system and stimulating a real world scenario.
+
+echo "====== Linux Ops Toolkit ======"
+echo
+echo "1. Process monitor"
+echo
+echo "2. Disk usage alert"
+echo
+echo "3.User Audit"
+echo 
+echo "4. Log Analyzer"
+echo 
+echo "5. Backup Directory"
+echo
+echo "6. Generate Report"
+echo 
+echo "7. Exit"
+echo
+
+read choice 
+case $choice in
+	
+	1)
+	echo "select one of the following"
+	echo "1 = Show top ten cpu consuming processes"
+	echo "2 = Search process by name"
+	echo "3 = Kill process by PID"
+
+esac
+read option 
+case $option in
+
+	1)ps aux --sort=-%cpu | head;;
+
+	2)echo "Please enter the name of the service"
+read service
+ps aux | grep $service ;;
+
+3)echo "Please enter the PID of process to kill it"
+read kill 
+kill $kill;;
+
+esac
