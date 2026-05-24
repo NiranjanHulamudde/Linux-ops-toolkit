@@ -1,6 +1,9 @@
 #!/bin/bash
 #This one provides more in detail menu options on system and stimulating a real world scenario.
 
+while true
+do
+
 echo "====== Linux Ops Toolkit ======"
 echo
 echo "1. Process monitor"
@@ -26,19 +29,50 @@ case $choice in
 	echo "1 = Show top ten cpu consuming processes"
 	echo "2 = Search process by name"
 	echo "3 = Kill process by PID"
-
-esac
+	
 read option 
 case $option in
 
 	1)ps aux --sort=-%cpu | head;;
 
 	2)echo "Please enter the name of the service"
-read service
-ps aux | grep $service ;;
+	read service
+	ps aux | grep $service ;;
 
-3)echo "Please enter the PID of process to kill it"
-read kill 
-kill $kill;;
+	3)echo "Please enter the PID of process to kill it" 
+	read ill
+	kill $ill;;
+esac ;;
+2) df -h;;
 
-esac
+3)
+	echo "1)Print current user"
+	echo "2)Print all users"
+	echo "3)Show hostname"
+
+	read ch
+	case $ch in
+		1)whoami;;
+		2)who;;
+		3)hostname;;
+	esac ;;	
+4)
+	echo "1)View syslog"
+	echo "2)View authlog"
+	echo "3)View live monitor log"
+
+	read ps
+	case $ps in
+		1)cat /var/log/sys.log | more;;
+		2)cat /var/log/auth.log | more;;
+		3)cat /var/log/monitor.log | more;;
+	esac ;;	
+	
+	7) echo "Exiting ..."
+	break
+	;;
+	*) echo "Please try again"
+	;;
+esac 	
+done
+
