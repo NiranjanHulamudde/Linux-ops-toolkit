@@ -63,9 +63,11 @@ esac ;;
 
 	read ps
 	case $ps in
-		1)cat /var/log/sys.log | more;;
+		1)cat /var/log/syslog | more;;
 		2)cat /var/log/auth.log | more;;
-		3)cat /var/log/monitor.log | more;;
+		3)echo "Please enter a log name" 
+			read log
+			tail -f /var/log/$log | more
 	esac ;;	
 	
 	7) echo "Exiting ..."
