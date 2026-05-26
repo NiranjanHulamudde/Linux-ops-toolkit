@@ -69,8 +69,22 @@ esac ;;
 			read log
 			tail -f /var/log/$log;;
 	esac ;;	
-	
-	7) echo "Exiting ..."
+
+5) echo "Enter the name of the directory path to be backed up"
+	read path
+
+	cp -r "$path" backup_directory
+	;;
+6) echo "Generating report..."
+	sleep 3 
+	echo "System report" > report.txt
+	date >> report.txt
+	free -h >> report.txt
+
+	echo "Report generated"
+	;;
+
+7) echo "Exiting ..."
 	break
 	;;
 	*) echo "Please try again"
