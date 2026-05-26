@@ -67,7 +67,7 @@ esac ;;
 		2)cat /var/log/auth.log | more;;
 		3)echo "Please enter a log name" 
 			read log
-			tail -f /var/log/$log | more
+			tail -f /var/log/$log;;
 	esac ;;	
 	
 	7) echo "Exiting ..."
