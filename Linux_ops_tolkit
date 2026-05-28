@@ -1,8 +1,9 @@
 #!/bin/bash
 #This one provides more in detail menu options on system and stimulating a real world scenario.
 
-while true
+while true;
 do
+
 
 echo "====== Linux Ops Toolkit ======"
 echo
@@ -85,8 +86,7 @@ esac ;;
 	;;
 
 7) echo "Exiting ..."
-	break
-	;;
+	exit 0 ;;
 	*) echo "Please try again"
 	;;
 esac 	

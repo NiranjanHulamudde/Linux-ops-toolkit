@@ -1,5 +1,5 @@
 System report
-Tuesday 26 May 2026 11:38:18 PM IST
+Thursday 28 May 2026 08:38:57 AM IST
                total        used        free      shared  buff/cache   available
-Mem:           4.2Gi       792Mi       1.6Gi        33Mi       1.8Gi       3.2Gi
+Mem:           4.2Gi       1.3Gi       461Mi        60Mi       2.5Gi       2.8Gi
 Swap:          2.8Gi          0B       2.8Gi
