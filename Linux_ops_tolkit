@@ -11,7 +11,7 @@ echo "1. Process monitor"
 echo
 echo "2. Disk usage alert"
 echo
-echo "3.User Audit"
+echo "3. User Audit"
 echo 
 echo "4. Log Analyzer"
 echo 
